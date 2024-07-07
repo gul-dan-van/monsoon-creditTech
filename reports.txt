@@ -1,0 +1,12 @@
+- analysed data, and types of loans and other datatypes.
+- 261383 unique userIds, and a total of 19,09,926 data points in enquiry and 12,45,310 in accounts. i.e., 4.75 accounts data and 7.3 enquiry data per userIds
+- Data too big, focus on 10,000 userIds and thus, roughly 47,500 accounts data and 73,000 enquiry data
+
+- not giving loan to new users improved the roc_auc_score by 0.02
+
+- First model: Contextual probabilistic model:
+    - checks history of the user, and the ratio of loans with amoutn overdue w.r.t. total loans they got
+    - if the ratio above a threshold, good to go
+    - roc_auc_score of 0.52, which is for random guesses
+    - Tried to apply threshold for total overdue amount w.r.t. tota loan amount,
+    - still produce 0.52 score
